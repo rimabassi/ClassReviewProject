@@ -1,0 +1,294 @@
+{
+	"Campus": [
+
+		{
+			"ID": "01",
+			"campus": "School of Theology"
+		}, {
+			"ID": "02",
+			"campus": "School of Medicine"
+		}, {
+			"ID": "03",
+			"campus": "School of Law"
+		}, {
+			"ID": "04",
+			"campus": "College of Arts and Sciences"
+		}, {
+			"ID": "05",
+			"campus": "Graduate School of Arts and Sciences"
+		}, {
+			"ID": "06",
+			"campus": "College of Health and Rehabilitation Sciences"
+		}, {
+			"ID": "07",
+			"campus": "Questrom School of Business"
+		}, {
+			"ID": "08",
+			"campus": "School of Education"
+		}, {
+			"ID": "09",
+			"campus": "School of Social Work"
+		}, {
+			"ID": "10",
+			"campus": "College of Communication"
+		}, {
+			"ID": "11",
+			"campus": "College of Engineering"
+		}, {
+			"ID": "12",
+			"campus": "College of General Studies"
+		}, {
+			"ID": "13",
+			"campus": "College of Fine Arts"
+		}, {
+			"ID": "14",
+			"campus": "Henry M. Goldman School of Dental Medicine"
+		}, {
+			"ID": "15",
+			"campus": "Metropolitan College"
+		}, {
+			"ID": "16",
+			"campus": "School of Public Health"
+		}, {
+			"ID": "17",
+			"campus": "School of Hospitality Administration"
+		}
+
+	],
+
+	"Degree": [{
+		"ID": "00",
+		"degree": "None"
+	}, {
+		"ID": "01",
+		"degree": "Undergraduate Minors"
+	}, {
+		"ID": "02",
+		"degree": "Undergraduate Majors"
+	}, {
+		"ID": "03",
+		"degree": "Master's"
+	}, {
+		"ID": "04",
+		"degree": "Doctorate"
+	}],
+
+	"Program": [{
+		"ID": "00",
+		"program": "None"
+	}, {
+		"ID": "01",
+		"program": "Computer Science"
+	}, {
+		"ID": "02",
+		"program": "Astronomy"
+	}, {
+		"ID": "03",
+		"program": "Biology"
+	}, {
+		"ID": "04",
+		"program": "English"
+	}, {
+		"ID": "05",
+		"program": "History"
+	}, {
+		"ID": "06",
+		"program": "Business Administration"
+	}, {
+		"ID": "07",
+		"program": "Management"
+	}, {
+		"ID": "08",
+		"program": "Economics"
+	}, {
+		"ID": "09",
+		"program": "Law"
+	}, {
+		"ID": "10",
+		"program": "International Relations"
+	}, {
+		"ID": "11",
+		"program": "Public Health"
+	}, {
+		"ID": "12",
+		"program": "Chemistry"
+	}, {
+		"ID": "13",
+		"program": "Biochemistry"
+	}, {
+		"ID": "14",
+		"program": "Japanese & Linguistics"
+	}, {
+		"ID": "15",
+		"program": "Neuroscience"
+	}, {
+		"ID": "16",
+		"program": "Philosophy"
+	}, {
+		"ID": "17",
+		"program": "Urban Affairs"
+	}, {
+		"ID": "18",
+		"program": "Mathematics"
+	}],
+	"Semester": [{
+		"ID": "00",
+		"semester": " "
+	},
+	{
+		"ID": "01",
+		"semester": "Summer 1"
+	}, {
+		"ID": "02",
+		"semester": "Summer 2"
+	}, {
+		"ID": "03",
+		"semester": "Fall"
+	}, {
+		"ID": "04",
+		"semester": "Spring"
+	}],
+	"Year": [{
+		"ID": "00",
+		"year": ""
+	},
+	{
+		"ID": "01",
+		"year": "2017"
+	}, {
+		"ID": "02",
+		"year": "2018"
+	}, {
+		"ID": "03",
+		"year": "2019"
+	}, {
+		"ID": "04",
+		"year": "2020"
+	}],
+	"Classes": [{
+			"ID": "00",
+			"class": "     "
+		}, {
+			"ID": "01",
+			"class": "CS633"
+		}, {
+			"ID": "02",
+			"class": "CS782"
+		}, {
+			"ID": "03",
+			"class": "CS632"
+		}, {
+			"ID": "04",
+			"class": "AS100"
+		}, {
+			"ID": "05",
+			"class": "AS101"
+		}, {
+			"ID": "06",
+			"class": "EC101"
+		}, {
+			"ID": "07",
+			"class": "EC201"
+		}, {
+			"ID": "08",
+			"class": "HI101"
+		}, {
+			"ID": "09",
+			"class": "HI151"
+		}, {
+			"ID": "10",
+			"class": "MS125"
+		}, {
+			"ID": "11",
+			"class": "MS126"
+		}, {
+			"ID": "12",
+			"class": "PH510"
+		}, {
+			"ID": "13",
+			"class": "PH511"
+		}, {
+			"ID": "14",
+			"class": "AC221"
+		}, {
+			"ID": "15",
+			"class": "FE101"
+		}, {
+			"ID": "16",
+			"class": "FE323"
+		}, {
+			"ID": "17",
+			"class": "EN521"
+		}, {
+			"ID": "18",
+			"class": "EN640"
+		}, {
+			"ID": "19",
+			"class": "PS101"
+		}, {
+			"ID": "20",
+			"class": "PS211"
+		}, {
+			"ID": "21",
+			"class": "MA107"
+		}, {
+			"ID": "22",
+			"class": "MA108"
+		}, {
+			"ID": "23",
+			"class": "NE101"
+		}, {
+			"ID": "24",
+			"class": "NE102"
+		}, {
+			"ID": "25",
+			"class": "LJ111"
+		}, {
+			"ID": "26",
+			"class": "LJ211"
+		}, {
+			"ID": "27",
+			"class": "BB192"
+		}, {
+			"ID": "28",
+			"class": "BB291"
+		}, {
+			"ID": "29",
+			"class": "UA301"
+		}, {
+			"ID": "30",
+			"class": "UA508"
+		}, {
+			"ID": "31",
+			"class": "JD602"
+		}, {
+			"ID": "32",
+			"class": "JD607"
+		},
+
+		{
+			"ID": "33",
+			"class": "CS669"
+		}, {
+			"ID": "34",
+			"class": "CS682"
+		}, {
+			"ID": "35",
+			"class": "CS520"
+		}, {
+			"ID": "36",
+			"class": "CS783"
+		}, {
+			"ID": "37",
+			"class": "CS546"
+		}, {
+			"ID": "38",
+			"class": "CS625"
+		}, {
+			"ID": "39",
+			"class": "CS634"
+		}
+
+	]
+
+}
