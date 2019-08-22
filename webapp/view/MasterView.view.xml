@@ -1,0 +1,498 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:semantic="sap.m.semantic" xmlns:ff="sap.f" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="BUStudentDirectory.controller.MasterView">
+	<App id="MasterID">
+		<pages>
+			<Page id="page">
+				<sap.m.semantic:DetailPage xmlns:sap.m.semantic="sap.m.semantic" id="__page1" showFooter="false">
+					<semantic:content>
+						<!-- Header Box -->
+						<VBox width="100%" direction="Column" id="HeaderBox" class="SubHeaderBar">
+							<items>
+								<HBox width="100%" id="__hbox0">
+									<items>
+										<ff:Avatar initials="" displaySize="XL" class="MasterSubHeaderAvatar"></ff:Avatar>
+										<VBox width="100%" direction="Column" id="__vbox0" class="MasterSubHeaderBox">
+											<items>
+												<Text id="buidheaderID" class="buidtext"/>
+												<Text id="nameheaderID" class="MasterSubHeaderText"/>
+												<Text id="schoolheaderID" class="MasterSubHeaderText"/>
+												<Text id="programheaderID" class="MasterSubHeaderText"/>
+											</items>
+										</VBox>
+									</items>
+								</HBox>
+							</items>
+						</VBox>
+					</semantic:content>
+					<!-- Body -->
+					<semantic:content>
+						<IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding" select="onSelectTab">
+							<items>
+								<!-- Update profile -->
+								<IconTabFilter id="Tab1" text="Update Profile" key="UpdateProfile">
+									<VBox width="100%" direction="Column" id="UpdateProfileBox">
+										<f:Form id="FormChange354" editable="true" width="800px">
+											<f:layout>
+												<f:ResponsiveGridLayout singleContainerFullSize="true"/>
+											</f:layout>
+											<f:formContainers>
+												<f:FormContainer>
+													<f:formElements>
+														<!-- field -->
+														<f:FormElement label="Full Name">
+															<Input id="firstnameID" type="Text" textAlign="Left"/>
+															<Input id="lastnameID" type="Text"/>
+														</f:FormElement>
+														<f:FormElement label="Password ">
+															<Input id="passwordID" type="Password" change="OnPasswordChange"/>
+														</f:FormElement>
+													</f:formElements>
+												</f:FormContainer>
+												<f:FormContainer ariaLabelledBy="Title2">
+													<f:toolbar>
+														<Toolbar>
+															<Title id="Title2" text="School Information" level="H5" titleStyle="H5"/>
+															<ToolbarSpacer/>
+														</Toolbar>
+													</f:toolbar>
+													<f:formElements>
+														<f:FormElement label="School">
+															<Input id="schoolID" type="Text"/>
+														</f:FormElement>
+														<f:FormElement label="Degree">
+															<ComboBox id="degreeID" items="{ path: '/Degree'}">
+																<core:Item key="{id}" text="{degree}"/>
+															</ComboBox>
+														</f:FormElement>
+														<f:FormElement label="Program">
+															<ComboBox id="programID" items="{ path: '/Program'}">
+																<core:Item key="{id}" text="{program}"/>
+															</ComboBox>
+														</f:FormElement>
+													</f:formElements>
+												</f:FormContainer>
+												<f:FormContainer ariaLabelledBy="Title3">
+													<f:toolbar>
+														<Toolbar>
+															<Title id="Title3" text="First Semester Information" level="H5" titleStyle="H5"/>
+															<ToolbarSpacer/>
+														</Toolbar>
+													</f:toolbar>
+													<f:formElements>
+														<f:FormElement label="Semester">
+															<ComboBox id="semester1ID" items="{ path: '/Semester'}">
+																<core:Item key="{id}" text="{semester}"/>
+															</ComboBox>
+															<ComboBox id="s1yearID" items="{ path: '/Year'}">
+																<core:Item key="{id}" text="{year}"/>
+															</ComboBox>
+															<Input id="s1gpaID" type="Number"/>
+														</f:FormElement>
+														<f:FormElement label="Classes">
+															<ComboBox id="s1class1ID" items="{ path: '/Classes'}">
+																<core:Item key="{id}" text="{class}"/>
+															</ComboBox>
+															<ComboBox id="s1class2ID" items="{ path: '/Classes'}">
+																<core:Item key="{id}" text="{class}"/>
+															</ComboBox>
+															<ComboBox id="s1class3ID" items="{ path: '/Classes'}">
+																<core:Item key="{id}" text="{class}"/>
+															</ComboBox>
+															<ComboBox id="s1class4ID" items="{ path: '/Classes'}">
+																<core:Item key="{id}" text="{class}"/>
+															</ComboBox>
+														</f:FormElement>
+													</f:formElements>
+												</f:FormContainer>
+												<f:FormContainer ariaLabelledBy="Title4">
+													<f:toolbar>
+														<Toolbar>
+															<Title id="Title4" text="Second Semester Information" level="H5" titleStyle="H5"/>
+															<ToolbarSpacer/>
+														</Toolbar>
+													</f:toolbar>
+													<f:formElements>
+														<f:FormElement label="Semester">
+															<ComboBox id="semester2ID" items="{ path: '/Semester'}">
+																<core:Item key="{id}" text="{semester}"/>
+															</ComboBox>
+															<ComboBox id="s2yearID" items="{ path: '/Year'}">
+																<core:Item key="{id}" text="{year}"/>
+															</ComboBox>
+															<Input id="s2gpaID" type="Number"/>
+														</f:FormElement>
+														<f:FormElement label="Classes">
+															<ComboBox id="s2class1ID" items="{ path: '/Classes'}">
+																<core:Item key="{id}" text="{class}"/>
+															</ComboBox>
+															<ComboBox id="s2class2ID" items="{ path: '/Classes'}">
+																<core:Item key="{id}" text="{class}"/>
+															</ComboBox>
+															<ComboBox id="s2class3ID" items="{ path: '/Classes'}">
+																<core:Item key="{id}" text="{class}"/>
+															</ComboBox>
+															<ComboBox id="s2class4ID" items="{ path: '/Classes'}">
+																<core:Item key="{id}" text="{class}"/>
+															</ComboBox>
+														</f:FormElement>
+													</f:formElements>
+												</f:FormContainer>
+												<f:FormContainer ariaLabelledBy="Title5">
+													<f:toolbar>
+														<Toolbar>
+															<Title id="Title5" text="Third Semester Information" level="H5" titleStyle="H5"/>
+															<ToolbarSpacer/>
+														</Toolbar>
+													</f:toolbar>
+													<f:formElements>
+														<f:FormElement label="Semester">
+															<ComboBox id="semester3ID" items="{ path: '/Semester'}">
+																<core:Item key="{id}" text="{semester}"/>
+															</ComboBox>
+															<ComboBox id="s3yearID" items="{ path: '/Year'}">
+																<core:Item key="{id}" text="{year}"/>
+															</ComboBox>
+															<Input id="s3gpaID" type="Number" value="{s3gpa}"/>
+														</f:FormElement>
+														<f:FormElement label="Classes">
+															<ComboBox id="s3class1ID" items="{ path: '/Classes'}">
+																<core:Item key="{id}" text="{class}"/>
+															</ComboBox>
+															<ComboBox id="s3class2ID" items="{ path: '/Classes'}">
+																<core:Item key="{id}" text="{class}"/>
+															</ComboBox>
+															<ComboBox id="s3class3ID" items="{ path: '/Classes'}">
+																<core:Item key="{id}" text="{class}"/>
+															</ComboBox>
+															<ComboBox id="s3class4ID" items="{ path: '/Classes'}">
+																<core:Item key="{id}" text="{class}"/>
+															</ComboBox>
+														</f:FormElement>
+													</f:formElements>
+												</f:FormContainer>
+												<f:FormContainer ariaLabelledBy="Title6">
+													<f:toolbar>
+														<Toolbar>
+															<Title id="Title6" text="Fourth Semester Information" level="H5" titleStyle="H5"/>
+															<ToolbarSpacer/>
+														</Toolbar>
+													</f:toolbar>
+													<f:formElements>
+														<f:FormElement label="Semester">
+															<ComboBox id="semester4ID" items="{ path: '/Semester'}">
+																<core:Item key="{id}" text="{semester}"/>
+															</ComboBox>
+															<ComboBox id="s4yearID" items="{ path: '/Year'}">
+																<core:Item key="{id}" text="{year}"/>
+															</ComboBox>
+															<Input id="s4gpaID" type="Number" value="{s4gpa}"/>
+														</f:FormElement>
+														<f:FormElement label="Classes">
+															<ComboBox id="s4class1ID" items="{ path: '/Classes'}">
+																<core:Item key="{id}" text="{class}"/>
+															</ComboBox>
+															<ComboBox id="s4class2ID" items="{ path: '/Classes'}">
+																<core:Item key="{id}" text="{class}"/>
+															</ComboBox>
+															<ComboBox id="s4class3ID" items="{ path: '/Classes'}">
+																<core:Item key="{id}" text="{class}"/>
+															</ComboBox>
+															<ComboBox id="s4class4ID" items="{ path: '/Classes'}">
+																<core:Item key="{id}" text="{class}"/>
+															</ComboBox>
+														</f:FormElement>
+													</f:formElements>
+												</f:FormContainer>
+												<f:FormContainer ariaLabelledBy="Title7">
+													<f:toolbar>
+														<Toolbar>
+															<Title id="Title7" text="Personal Contact Information" level="H5" titleStyle="H5"/>
+															<ToolbarSpacer/>
+														</Toolbar>
+													</f:toolbar>
+													<f:formElements>
+														<f:FormElement label="Contact E-mail ">
+															<Input id="emailID" type="Email"/>
+														</f:FormElement>
+														<f:FormElement label="Phone Number ">
+															<Input id="phonenumberID" type="Tel"/>
+														</f:FormElement>
+														<f:FormElement label="Mobile Number ">
+															<Input id="mobilenumberID" type="Tel"/>
+														</f:FormElement>
+														<f:FormElement label="Skype Account ">
+															<Input id="skypeaccountID" type="Text"/>
+														</f:FormElement>
+														<f:FormElement label="Slack Account ">
+															<Input id="slackaccountID" type="Text"/>
+														</f:FormElement>
+														<f:FormElement id="__element11">
+															<f:fields>
+																<Button text="Update" id="UpdateBtn" width="20%" press="onUpdateAccount" class="masterButton"/>
+															</f:fields>
+														</f:FormElement>
+														<!-- field -->
+													</f:formElements>
+												</f:FormContainer>
+											</f:formContainers>
+										</f:Form>
+									</VBox>
+								</IconTabFilter>
+								<!-- Add review -->
+								<IconTabFilter text="Add Reviews" key="AddReview">
+									<VBox class="sapUiSmallMargin">
+										<f:Form id="ReviewForm" editable="true" width="1000px">
+											<f:layout>
+												<f:ResponsiveGridLayout singleContainerFullSize="true"/>
+											</f:layout>
+											<f:formContainers>
+												<f:FormContainer ariaLabelledBy="Title01">
+													<f:toolbar>
+														<Toolbar>
+															<Title id="Title01" text="Add Classes Review" level="H5" titleStyle="H5"/>
+															<ToolbarSpacer/>
+														</Toolbar>
+													</f:toolbar>
+													<f:formElements>
+														<f:FormElement id="updatereviewFe">
+															<f:fields>
+																<Button id="UpdateReviewBtn" icon="sap-icon://accept" text="Save/Update Reviews" width="20%" press="onUpdateReviews"
+																	class="masterReviewButton"/>
+															</f:fields>
+														</f:FormElement>
+														<!-- First semester container -->
+														<f:FormElement >
+															<Text id="s1c1textID"/>
+														</f:FormElement>
+														<f:FormElement >
+															<TextArea id="tab2s1c1reviewID" maxLength="300" width="100%" rows="4"/>
+														</f:FormElement>
+														<f:FormElement>
+															<Button id="s1c1savebtn" icon="sap-icon://citizen-connect" text="Share Review" class="masterReviewButton" width="20%"
+																press="onUpdates1c1Review"></Button>
+														</f:FormElement>
+														<f:FormElement >
+															<Text id="s1c2textID"/>
+														</f:FormElement>
+														<f:FormElement >
+															<TextArea id="tab2s1c2reviewID" maxLength="300" width="100%" rows="4"/>
+														</f:FormElement>
+														<f:FormElement>
+															<Button id="s1c2savebtn" icon="sap-icon://citizen-connect" text="Share Review" class="masterReviewButton" width="20%"
+																press="onUpdates1c2Review"></Button>
+														</f:FormElement>
+														<f:FormElement >
+															<Text id="s1c3textID"/>
+														</f:FormElement>
+														<f:FormElement >
+															<TextArea id="tab2s1c3reviewID" maxLength="300" width="100%" rows="4"/>
+														</f:FormElement>
+														<f:FormElement>
+															<Button id="s1c3savebtn" icon="sap-icon://citizen-connect" text="Share Review" class="masterReviewButton" width="20%"
+																press="onUpdates1c3Review"></Button>
+														</f:FormElement>
+														<f:FormElement >
+															<Text id="s1c4textID"/>
+														</f:FormElement>
+														<f:FormElement >
+															<TextArea id="tab2s1c4reviewID" maxLength="300" width="100%" rows="4"/>
+														</f:FormElement>
+														<f:FormElement>
+															<Button id="s1c4savebtn" icon="sap-icon://citizen-connect" text="Share Review" class="masterReviewButton" width="20%"
+																press="onUpdates1c4Review"></Button>
+														</f:FormElement>
+														<!-- second semester -->
+														<f:FormElement >
+															<Text id="s2c1textID"/>
+														</f:FormElement>
+														<f:FormElement >
+															<TextArea id="tab2s2c1reviewID" maxLength="300" width="100%" rows="4"/>
+														</f:FormElement>
+														<f:FormElement>
+															<Button id="s2c1savebtn" icon="sap-icon://citizen-connect" text="Share Review" class="masterReviewButton" width="20%"
+																press="onUpdates2c1Review"></Button>
+														</f:FormElement>
+														<f:FormElement >
+															<Text id="s2c2textID"/>
+														</f:FormElement>
+														<f:FormElement >
+															<TextArea id="tab2s2c2reviewID" maxLength="300" width="100%" rows="4"/>
+														</f:FormElement>
+														<f:FormElement>
+															<Button id="s2c2savebtn" icon="sap-icon://citizen-connect" text="Share Review" class="masterReviewButton" width="20%"
+																press="onUpdates2c2Review"></Button>
+														</f:FormElement>
+														<f:FormElement >
+															<Text id="s2c3textID"/>
+														</f:FormElement>
+														<f:FormElement >
+															<TextArea id="tab2s2c3reviewID" maxLength="300" width="100%" rows="4"/>
+														</f:FormElement>
+														<f:FormElement>
+															<Button id="s2c3savebtn" icon="sap-icon://citizen-connect" text="Share Review" class="masterReviewButton" width="20%"
+																press="onUpdates2c3Review"></Button>
+														</f:FormElement>
+														<f:FormElement >
+															<Text id="s2c4textID"/>
+														</f:FormElement>
+														<f:FormElement >
+															<TextArea id="tab2s2c4reviewID" maxLength="300" width="100%" rows="4"/>
+														</f:FormElement>
+														<f:FormElement>
+															<Button id="s2c4savebtn" icon="sap-icon://citizen-connect" text="Share Review" class="masterReviewButton" width="20%"
+																press="onUpdates2c4Review"></Button>
+														</f:FormElement>
+														<!-- thrid semester -->
+														<f:FormElement >
+															<Text id="s3c1textID"/>
+														</f:FormElement>
+														<f:FormElement >
+															<TextArea id="tab2s3c1reviewID" maxLength="300" width="100%" rows="4"/>
+														</f:FormElement>
+														<f:FormElement>
+															<Button id="s3c1savebtn" icon="sap-icon://citizen-connect" text="Share Review" class="masterReviewButton" width="20%"
+																press="onUpdates3c1Review"></Button>
+														</f:FormElement>
+														<f:FormElement >
+															<Text id="s3c2textID"/>
+														</f:FormElement>
+														<f:FormElement >
+															<TextArea id="tab2s3c2reviewID" maxLength="300" width="100%" rows="4"/>
+														</f:FormElement>
+														<f:FormElement>
+															<Button id="s3c2savebtn" icon="sap-icon://citizen-connect" text="Share Review" class="masterReviewButton" width="20%"
+																press="onUpdates3c2Review"></Button>
+														</f:FormElement>
+														<f:FormElement >
+															<Text id="s3c3textID"/>
+														</f:FormElement>
+														<f:FormElement>
+															<TextArea id="tab2s3c3reviewID" maxLength="300" width="100%" rows="4"/>
+														</f:FormElement>
+														<f:FormElement>
+															<Button id="s3c3savebtn" icon="sap-icon://citizen-connect" text="Share Review" class="masterReviewButton" width="20%"
+																press="onUpdates3c3Review"></Button>
+														</f:FormElement>
+														<f:FormElement >
+															<Text id="s3c4textID"/>
+														</f:FormElement>
+														<f:FormElement >
+															<TextArea id="tab2s3c4reviewID" maxLength="300" width="100%" rows="4"/>
+														</f:FormElement>
+														<f:FormElement>
+															<Button id="s3c4savebtn" icon="sap-icon://citizen-connect" text="Share Review" class="masterReviewButton" width="20%"
+																press="onUpdates3c4Review"></Button>
+														</f:FormElement>
+														<!-- fourth semester -->
+														<f:FormElement >
+															<Text id="s4c1textID"/>
+														</f:FormElement>
+														<f:FormElement >
+															<TextArea id="tab2s4c1reviewID" maxLength="300" width="100%" rows="4"/>
+														</f:FormElement>
+														<f:FormElement>
+															<Button id="s4c1savebtn" icon="sap-icon://citizen-connect" text="Share Review" class="masterReviewButton" width="20%"
+																press="onUpdates4c1Review"></Button>
+														</f:FormElement>
+														<f:FormElement >
+															<Text id="s4c2textID"/>
+														</f:FormElement>
+														<f:FormElement>
+															<TextArea id="tab2s4c2reviewID" maxLength="300" width="100%" rows="4"/>
+														</f:FormElement>
+														<f:FormElement>
+															<Button id="s4c2savebtn" icon="sap-icon://citizen-connect" text="Share Review" class="masterReviewButton" width="20%"
+																press="onUpdates4c2Review"></Button>
+														</f:FormElement>
+														<f:FormElement >
+															<Text id="s4c3textID"/>
+														</f:FormElement>
+														<f:FormElement >
+															<TextArea id="tab2s4c3reviewID" maxLength="300" width="100%" rows="4"/>
+														</f:FormElement>
+														<f:FormElement>
+															<Button id="s4c3savebtn" icon="sap-icon://citizen-connect" text="Share Review" class="masterReviewButton" width="20%"
+																press="onUpdates4c3Review"></Button>
+														</f:FormElement>
+														<f:FormElement >
+															<Text id="s4c4textID"/>
+														</f:FormElement>
+														<f:FormElement >
+															<TextArea id="tab2s4c4reviewID" maxLength="300" width="100%" rows="4"/>
+														</f:FormElement>
+														<f:FormElement>
+															<Button id="s4c4savebtn" icon="sap-icon://citizen-connect" text="Share Review" class="masterReviewButton" width="20%"
+																press="onUpdates4c4Review"></Button>
+														</f:FormElement>
+													</f:formElements>
+												</f:FormContainer>
+											</f:formContainers>
+										</f:Form>
+									</VBox>
+								</IconTabFilter>
+								<!-- search for students -->
+								<IconTabFilter text="Search for Students" key="SearchStudent">
+									<VBox width="60%" direction="Column" id="SearchStudentsvbox" fitContainer="true" class="studentlistbox">
+										<Toolbar>
+											<SearchField search="onStudentSearch" width="100%"/>
+										</Toolbar>
+										<List id="StudentsList" headerText="Students' List">
+											<!--	<items>
+												<StandardListItem id = "StudentRow" title="{path:'StudentsModel>buid'}" description="{school}" icon="sap-icon://visits" iconDensityAware="false" iconInset="false"/>
+											</items> -->
+											<CustomListItem id="StudentRow">
+												<HBox>
+													<core:Icon size="2rem" src="sap-icon://attachment-photo" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
+													<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+														<Text text="{path:'StudentsModel>firstname'} {path:'StudentsModel>lastname'}"></Text>
+														<Text text="{path:'StudentsModel>school'}"></Text>
+														<Text text="{path:'StudentsModel>degree'} {path:'StudentsModel>program'}"></Text>
+													</VBox>
+													<VBox >
+														<Button icon="sap-icon://arobase" text="{path:'StudentsModel>email'}" type="Transparent" class="informationbtn" enabled="false"></Button>
+														<Button icon="sap-icon://call" text="{path:'StudentsModel>phonenumber'}" type="Transparent" class="informationbtn" enabled="false"></Button>
+														<Button icon="sap-icon://iphone" text="{path:'StudentsModel>mobilenumber'} " type="Transparent" class="informationbtn" enabled="false"></Button>
+													</VBox>
+													<VBox>
+														<Button icon="./images/skype.png" text="{path:'StudentsModel>skypeaccount'}" type="Transparent" class="accountbtn" enabled="false"></Button>
+														<Button icon="./images/slack.png" text="{path:'StudentsModel>slackaccount'}" type="Transparent" class="accountbtn" enabled="false"></Button>
+													</VBox>
+												</HBox>
+											</CustomListItem>
+										</List>
+									</VBox>
+								</IconTabFilter>
+								<!-- search for reviews -->
+								<IconTabFilter text="Search for Reviews" key="SearchReview">
+									<VBox width="80%" direction="Column" id="SearchReviewVbox" fitContainer="true" class="reviewlistbox">
+										<Toolbar>
+											<SearchField search="onSearchReview" width="100%"/>
+										</Toolbar>
+										<List noDataText="Drop list items here" id="classreviewList" headerText="Reviews List">
+											<items>
+												<!--	<ObjectListItem type="Active" title="{path:'ReviewModel>classname'}"  id="classReviewRow" /> -->
+												<FeedListItem id="classReviewRow" sender="{path:'ReviewModel>classname'}" icon="sap-icon://comment" iconDensityAware="false"
+													text="{path:'ReviewModel>classreview'}"></FeedListItem>
+											</items>
+										</List>
+									</VBox>
+								</IconTabFilter>
+								<!-- end of body -->
+							</items>
+						</IconTabBar>
+					</semantic:content>
+				</sap.m.semantic:DetailPage>
+				<customHeader>
+					<Bar id="__bar3">
+						<contentLeft>
+							<Image width="100px" height="50px" id="__image1" src="./images/bu.png"/>
+						</contentLeft>
+						<contentMiddle>
+							<Title text="Boston University" width="100%" id="__title0" class="appheader"/>
+						</contentMiddle>
+					</Bar>
+				</customHeader>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

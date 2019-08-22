@@ -1,0 +1,244 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form" controllerName="BUStudentDirectory.controller.NewUser">
+	<App id="NewUserID">
+		<pages>
+			<Page id = "page" title="{i18n>title}">
+				<sap.ui.layout:VerticalLayout xmlns:sap.ui.layout="sap.ui.layout" class="newaccount" id="__layout0" >
+					<sap.ui.layout:content>
+						<f:Form id="FormChange354" editable="true" width="800px" title="Create new Account">
+							<f:layout>
+								<f:ResponsiveGridLayout singleContainerFullSize="true"/>
+							</f:layout>
+							<f:formContainers>
+								<f:FormContainer>
+									<f:formElements>
+										<f:FormElement label="I'm a">
+											<f:fields>
+												<RadioButtonGroup id="persontypeID" columns="3">
+													<buttons>
+														<RadioButton id="RB1-1" text="Student" select = "OnSelectPersontype"/>
+														<RadioButton id="RB1-2" text="Professor" select = "OnSelectPersontype" />
+														<RadioButton id="RB1-3" text="TA" select = "OnSelectPersontype"/>
+													</buttons>
+												</RadioButtonGroup>
+											</f:fields>
+										</f:FormElement>
+										<f:FormElement label="Full Name ">
+											<Input id="firstnameID" type="Text" required="true" dateFormat="" textAlign="Left" placeholder="Enter First Name" valueLiveUpdate="true" valueStateText="First Name is required."/>
+											<Input id="lastnameID" type="Text" required="true" placeholder="Enter Last Name" valueLiveUpdate="true" valueStateText="Last Name is required."/>
+										</f:FormElement>
+										<f:FormElement label="BU ID ">
+											<Input id="buidID" type="Number" required="true" placeholder="Enter your BU ID" valueLiveUpdate="true" valueStateText="BU ID must be 10 digits." change="OnBuidChange" liveChange="OnBuidLiveChange"/>
+										</f:FormElement>
+										<f:FormElement label="Password ">
+											<Input id="passwordID" type="Password" required="true" placeholder="Enter your Password" valueStateText="Password should be at least 6 characters" change="OnPasswordChange"/>
+										</f:FormElement>
+									</f:formElements>
+								</f:FormContainer>
+								<f:FormContainer ariaLabelledBy="Title2">
+									<f:toolbar>
+										<Toolbar>
+											<Title id="Title2" text="School Information" level="H5" titleStyle="H5"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</f:toolbar>
+									<f:formElements>
+										<f:FormElement label="School">
+											<ComboBox id="schoolID" items="{ path: '/Campus'}" required="true" placeholder="Choose your School">
+												<core:Item key="{id}" text="{campus}"/>
+											</ComboBox>
+										</f:FormElement>
+										<f:FormElement label="Degree">
+											<ComboBox id="degreeID" items="{ path: '/Degree'}" placeholder="Choose your degree">
+												<core:Item key="{id}" text="{degree}"/>
+											</ComboBox>
+										</f:FormElement>
+										<f:FormElement label="Program">
+											<ComboBox id="programID" items="{ path: '/Program'}" placeholder="Choose your Program">
+												<core:Item key="{id}" text="{program}"/>
+											</ComboBox>
+										</f:FormElement>
+									</f:formElements>
+								</f:FormContainer>
+								<f:FormContainer ariaLabelledBy="Title3">
+									<f:toolbar>
+										<Toolbar>
+											<Title id="Title3" text="First Semester Information" level="H5" titleStyle="H5"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</f:toolbar>
+									<f:formElements>
+										<f:FormElement label="Semester">
+											<ComboBox id="semester1ID" items="{ path: '/Semester'}" placeholder="Semester">
+												<core:Item key="{id}" text="{semester}"/>
+											</ComboBox>
+											<ComboBox id="s1yearID" items="{ path: '/Year'}" placeholder="Year">
+												<core:Item key="{id}" text="{year}"/>
+											</ComboBox>
+											<Input id="s1gpaID" type="Number" placeholder="GPA"/>
+										</f:FormElement>
+										<f:FormElement label="Classes">
+											<ComboBox id="s1class1ID" items="{ path: '/Classes'}">
+												<core:Item key="{id}" text="{class}"/>
+											</ComboBox>
+											<ComboBox id="s1class2ID" items="{ path: '/Classes'}">
+												<core:Item key="{id}" text="{class}"/>
+											</ComboBox>
+											<ComboBox id="s1class3ID" items="{ path: '/Classes'}">
+												<core:Item key="{id}" text="{class}"/>
+											</ComboBox>
+											<ComboBox id="s1class4ID" items="{ path: '/Classes'}">
+												<core:Item key="{id}" text="{class}"/>
+											</ComboBox>
+										</f:FormElement>
+									</f:formElements>
+								</f:FormContainer>
+								<f:FormContainer ariaLabelledBy="Title4">
+									<f:toolbar>
+										<Toolbar>
+											<Title id="Title4" text="Second Semester Information" level="H5" titleStyle="H5"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</f:toolbar>
+									<f:formElements>
+										<f:FormElement label="Semester">
+											<ComboBox id="semester2ID" items="{ path: '/Semester'}" placeholder="Semester">
+												<core:Item key="{id}" text="{semester}"/>
+											</ComboBox>
+											<ComboBox id="s2yearID" items="{ path: '/Year'}" placeholder="Year">
+												<core:Item key="{id}" text="{year}"/>
+											</ComboBox>
+											<Input id="s2gpaID" type="Number" placeholder="GPA"/>
+										</f:FormElement>
+										<f:FormElement label="Classes">
+											<ComboBox id="s2class1ID" items="{ path: '/Classes'}">
+												<core:Item key="{id}" text="{class}"/>
+											</ComboBox>
+											<ComboBox id="s2class2ID" items="{ path: '/Classes'}">
+												<core:Item key="{id}" text="{class}"/>
+											</ComboBox>
+											<ComboBox id="s2class3ID" items="{ path: '/Classes'}">
+												<core:Item key="{id}" text="{class}"/>
+											</ComboBox>
+											<ComboBox id="s2class4ID" items="{ path: '/Classes'}">
+												<core:Item key="{id}" text="{class}"/>
+											</ComboBox>
+										</f:FormElement>
+									</f:formElements>
+								</f:FormContainer>
+								<f:FormContainer ariaLabelledBy="Title5">
+									<f:toolbar>
+										<Toolbar>
+											<Title id="Title5" text="Third Semester Information" level="H5" titleStyle="H5"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</f:toolbar>
+									<f:formElements>
+										<f:FormElement label="Semester">
+											<ComboBox id="semester3ID" items="{ path: '/Semester'}" placeholder="Semester">
+												<core:Item key="{id}" text="{semester}"/>
+											</ComboBox>
+											<ComboBox id="s3yearID" items="{ path: '/Year'}" placeholder="Year">
+												<core:Item key="{id}" text="{year}"/>
+											</ComboBox>
+											<Input id="s3gpaID" type="Number" placeholder="GPA"/>
+										</f:FormElement>
+										<f:FormElement label="Classes">
+											<ComboBox id="s3class1ID" items="{ path: '/Classes'}">
+												<core:Item key="{id}" text="{class}"/>
+											</ComboBox>
+											<ComboBox id="s3class2ID" items="{ path: '/Classes'}">
+												<core:Item key="{id}" text="{class}"/>
+											</ComboBox>
+											<ComboBox id="s3class3ID" items="{ path: '/Classes'}">
+												<core:Item key="{id}" text="{class}"/>
+											</ComboBox>
+											<ComboBox id="s3class4ID" items="{ path: '/Classes'}">
+												<core:Item key="{id}" text="{class}"/>
+											</ComboBox>
+										</f:FormElement>
+									</f:formElements>
+								</f:FormContainer>
+								<f:FormContainer ariaLabelledBy="Title6">
+									<f:toolbar>
+										<Toolbar>
+											<Title id="Title6" text="Fourth Semester Information" level="H5" titleStyle="H5"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</f:toolbar>
+									<f:formElements>
+										<f:FormElement label="Semester">
+											<ComboBox id="semester4ID" items="{ path: '/Semester'}" placeholder="Semester">
+												<core:Item key="{id}" text="{semester}"/>
+											</ComboBox>
+											<ComboBox id="s4yearID" items="{ path: '/Year'}" placeholder="Year">
+												<core:Item key="{id}" text="{year}"/>
+											</ComboBox>
+											<Input id="s4gpaID" type="Number" placeholder="GPA"/>
+										</f:FormElement>
+										<f:FormElement label="Classes">
+											<ComboBox id="s4class1ID" items="{ path: '/Classes'}">
+												<core:Item key="{id}" text="{class}"/>
+											</ComboBox>
+											<ComboBox id="s4class2ID" items="{ path: '/Classes'}">
+												<core:Item key="{id}" text="{class}"/>
+											</ComboBox>
+											<ComboBox id="s4class3ID" items="{ path: '/Classes'}">
+												<core:Item key="{id}" text="{class}"/>
+											</ComboBox>
+											<ComboBox id="s4class4ID" items="{ path: '/Classes'}">
+												<core:Item key="{id}" text="{class}"/>
+											</ComboBox>
+										</f:FormElement>
+									</f:formElements>
+								</f:FormContainer>
+								<f:FormContainer ariaLabelledBy="Title7">
+									<f:toolbar>
+										<Toolbar>
+											<Title id="Title7" text="Personal Contact Information" level="H5" titleStyle="H5"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</f:toolbar>
+									<f:formElements>
+										<f:FormElement  label="Contact E-mail ">
+											<Input id="emailID" type="Email" placeholder="Enter your contact E-mail Address"/>
+										</f:FormElement>
+										<f:FormElement label="Contact Numbers ">
+											<Input id="phonenumberID" type="Tel" placeholder="Telephone Number"/>
+											<Input id="mobilenumberID" type="Tel" placeholder="Mobile Number"/>
+										</f:FormElement>
+										<f:FormElement label="Skype Account ">
+											<Input id="skypeaccountID" type="Text" placeholder="Enter your Skype Account"/>
+										</f:FormElement>
+										<f:FormElement label="Slack Account ">
+											<Input id="slackaccountID" type="Text" placeholder="Enter your Slack Account"/>
+										</f:FormElement>
+										<f:FormElement id="__element11">
+											<f:fields>
+												<SegmentedButton id="__button0" width="50%" class="CreateBtn">
+													<buttons>
+														<Button text="Create" id="CreateBtn" type="Accept" width="50%" press="onCreateNewAccount"/>
+														<Button text="Cancel" id="CreateCancelBtn" width="50%" press="OnCancelCreateNewAccount"/></buttons>
+												</SegmentedButton>
+											</f:fields>
+										</f:FormElement>
+									</f:formElements>
+								</f:FormContainer>
+							</f:formContainers>
+						</f:Form>
+					</sap.ui.layout:content>
+				</sap.ui.layout:VerticalLayout>
+				
+				<customHeader>
+			    <Bar id="__bar3">
+			    <contentLeft>
+			        <Image width="100px" height="50px" id="__image1" src="./images/bu.png"/>
+			    </contentLeft>
+			    <contentMiddle>
+			        <Title text="Boston University" width="100%" id="__title0" class="appheader"/>
+			    </contentMiddle>
+			    </Bar>
+			</customHeader>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
