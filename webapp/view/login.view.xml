@@ -1,0 +1,59 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="BUStudentDirectory.controller.Login" displayBlock="true">
+	<App id="LoginID" backgroundImage="./images/bucampus.jpg">
+		<pages >
+			<Page  title="{i18n>title}" showFooter="false" showSubHeader="false" titleLevel="H1" enableScrolling="false" backgroundDesign="Transparent">
+				<content>
+					<sap.ui.layout:VerticalLayout xmlns:sap.ui.layout="sap.ui.layout" class="loginForm" width="50%" id="__layout0" >
+						<sap.ui.layout:content>
+							<sap.ui.layout.form:Form xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" id="loginForm" width="100%" title="Student Directory">
+								<sap.ui.layout.form:formContainers>
+									<sap.ui.layout.form:FormContainer id="__container0">
+										<sap.ui.layout.form:formElements>
+											<sap.ui.layout.form:FormElement label="BU ID" id="buidElement">
+												<sap.ui.layout.form:fields>
+													<Input width="100%" id="buidField" maxLength="10" placeholder="Enter your Boston University ID" required="true" showTableSuggestionValueHelp="false" type="Number" valueLiveUpdate="true" valueStateText="BU ID must be 10 digits." change="OnBuidChange" liveChange="OnBuidLiveChange"/>
+												</sap.ui.layout.form:fields>
+											</sap.ui.layout.form:FormElement>
+											<sap.ui.layout.form:FormElement label="Password" id="passwordElement">
+												<sap.ui.layout.form:fields>
+													<Input width="100%" id="passwordField" filterSuggests="false" maxLength="20" required="true" placeholder="Enter a password" type="Password" valueStateText="Password should be at least 6 characters" change="OnPasswordChange"/>
+												</sap.ui.layout.form:fields>
+											</sap.ui.layout.form:FormElement>
+											<sap.ui.layout.form:FormElement id="__element1">
+												<sap.ui.layout.form:fields>
+													<SegmentedButton id="__button4" class="loginBtn">
+														<buttons>
+															<Button text="Login" id="LoginBtn" type="Accept" width="40%" press="OnLogIn"/>
+															<Button text="Create New Account" id="CreateAccountBtn" type="Accept" width="60%" press="OnCreateNewAccount"/></buttons>
+													</SegmentedButton>
+												</sap.ui.layout.form:fields>
+											</sap.ui.layout.form:FormElement>
+											<sap.ui.layout.form:FormElement id="__element0">
+												<sap.ui.layout.form:fields><MessageStrip text="Don't have an Account? Click on Create New Account"  id="__strip0" class= "message"/>
+												</sap.ui.layout.form:fields>
+											</sap.ui.layout.form:FormElement>
+										</sap.ui.layout.form:formElements>
+									</sap.ui.layout.form:FormContainer>
+								</sap.ui.layout.form:formContainers>
+								<sap.ui.layout.form:layout>
+									<sap.ui.layout.form:ResponsiveGridLayout id="__layout2"/>
+								</sap.ui.layout.form:layout>
+							</sap.ui.layout.form:Form>
+						</sap.ui.layout:content>
+					</sap.ui.layout:VerticalLayout>
+				</content>
+				
+			<customHeader>
+			    <Bar id="__bar3">
+			    <contentLeft>
+			        <Image width="100px" height="50px" id="__image1" src="./images/bu.png"/>
+			    </contentLeft>
+			    <contentMiddle>
+			        <Title text="Boston University" width="100%" id="__title0" class="appheader"/>
+			    </contentMiddle>
+			    </Bar>
+			</customHeader>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
