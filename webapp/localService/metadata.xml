@@ -1,0 +1,107 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+        <Schema
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="Mat">
+            <EntityType Name="Materials">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" MaxLength="4" Collation="UCA"/>
+                <Property Name="Name" Type="Edm.String" Nullable="true" MaxLength="30" Collation="UCA"/>
+                <Property Name="Price" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4"/>
+                <Property Name="UnitOfMeasure" Type="Edm.String" Nullable="true" MaxLength="2" Unicode="false" Collation="1252LATIN1"/>
+            </EntityType>
+            <EntityType Name="Positions">
+                <Key>
+                    <PropertyRef Name="PositionID"/>
+                </Key>
+                <Property Name="PositionID" Type="Edm.String" Nullable="false" MaxLength="10" Collation="UCA"/>
+                <Property Name="PositionDescription" Type="Edm.String" Nullable="true" MaxLength="30" Unicode="false" Collation="1252LATIN1"/>
+            </EntityType>
+            <EntityType Name="OrgUnits">
+                <Key>
+                    <PropertyRef Name="OrgUnitID"/>
+                </Key>
+                <Property Name="OrgUnitID" Type="Edm.String" Nullable="false" MaxLength="10" Collation="UCA"/>
+                <Property Name="OrgUnitDescription" Type="Edm.String" Nullable="true" MaxLength="30" Unicode="false" Collation="1252LATIN1"/>
+            </EntityType>
+            <EntityType Name="OrgUnit_Position">
+                <Key>
+                    <PropertyRef Name="OrgUnitID"/>
+                    <PropertyRef Name="PositionID"/>
+                </Key>
+                <Property Name="OrgUnitID" Type="Edm.String" Nullable="false" MaxLength="10" Collation="UCA"/>
+                <Property Name="PositionID" Type="Edm.String" Nullable="false" MaxLength="10" Collation="UCA"/>
+                <Property Name="PositionDescription" Type="Edm.String" Nullable="true" MaxLength="30" Unicode="false" Collation="1252LATIN1"/>
+            </EntityType>
+            <EntityType Name="VoteObjects">
+                <Key>
+                    <PropertyRef Name="ObjectId"/>
+                </Key>
+                <Property Name="ObjectId" Type="Edm.String" Nullable="false" MaxLength="10" Collation="UCA"/>
+                <Property Name="ObjectDescription" Type="Edm.String" Nullable="true" MaxLength="40" Unicode="false" Collation="1252LATIN1"/>
+                <Property Name="ObjectNbItems" Type="Edm.String" Nullable="true" MaxLength="10" Collation="UCA"/>
+            </EntityType>
+            <EntityType Name="VoteItems">
+                <Key>
+                    <PropertyRef Name="ObjectId"/>
+                    <PropertyRef Name="ItemId"/>
+                </Key>
+                <Property Name="ObjectId" Type="Edm.String" Nullable="false" MaxLength="10" Collation="UCA"/>
+                <Property Name="ItemId" Type="Edm.String" Nullable="false" MaxLength="10" Collation="UCA"/>
+                <Property Name="ItemDescription" Type="Edm.String" Nullable="true" MaxLength="40" Unicode="false" Collation="1252LATIN1"/>
+                <Property Name="ItemNbVotes" Type="Edm.Decimal" Nullable="true" Precision="10" Scale="0"/>
+            </EntityType>
+            <EntityType Name="Student">
+                <Key>
+                    <PropertyRef Name="email"/>
+                </Key>
+                <Property Name="email" Type="Edm.String" Nullable="false" MaxLength="20" Collation="UCA"/>
+                <Property Name="password" Type="Edm.String" Nullable="false" MaxLength="20" Collation="UCA"/>
+                <Property Name="firstname" Type="Edm.String" Nullable="true" MaxLength="30" Collation="UCA"/>
+                <Property Name="lastname" Type="Edm.String" Nullable="true" MaxLength="30" Collation="UCA"/>
+                <Property Name="major" Type="Edm.String" Nullable="true" MaxLength="30" Collation="UCA"/>
+                <Property Name="program" Type="Edm.String" Nullable="true" MaxLength="30" Collation="UCA"/>
+                <Property Name="campus" Type="Edm.String" Nullable="true" MaxLength="30" Collation="UCA"/>
+                <Property Name="phonenumber" Type="Edm.Decimal" Nullable="true" Precision="10" Scale="0"/>
+                <Property Name="cellnumber" Type="Edm.Decimal" Nullable="true" Precision="10" Scale="0"/>
+                <Property Name="contact_email" Type="Edm.String" Nullable="true" MaxLength="20" Collation="UCA"/>
+                <Property Name="skype_account" Type="Edm.String" Nullable="true" MaxLength="20" Collation="UCA"/>
+                <Property Name="slack_account" Type="Edm.String" Nullable="true" MaxLength="20" Collation="UCA"/>
+                <Property Name="coursecode1" Type="Edm.String" Nullable="true" MaxLength="5" Collation="UCA"/>
+                <Property Name="coursereview1" Type="Edm.String" Nullable="true" MaxLength="300" Collation="UCA"/>
+                <Property Name="coursecode2" Type="Edm.String" Nullable="true" MaxLength="5" Collation="UCA"/>
+                <Property Name="coursereview2" Type="Edm.String" Nullable="true" MaxLength="300" Collation="UCA"/>
+                <Property Name="coursecode3" Type="Edm.String" Nullable="true" MaxLength="5" Collation="UCA"/>
+                <Property Name="coursereview3" Type="Edm.String" Nullable="true" MaxLength="300" Collation="UCA"/>
+                <Property Name="coursecode4" Type="Edm.String" Nullable="true" MaxLength="5" Collation="UCA"/>
+                <Property Name="coursereview4" Type="Edm.String" Nullable="true" MaxLength="300" Collation="UCA"/>
+                <Property Name="coursecode5" Type="Edm.String" Nullable="true" MaxLength="5" Collation="UCA"/>
+                <Property Name="coursereview5" Type="Edm.String" Nullable="true" MaxLength="300" Collation="UCA"/>
+                <Property Name="coursecode6" Type="Edm.String" Nullable="true" MaxLength="5" Collation="UCA"/>
+                <Property Name="coursereview6" Type="Edm.String" Nullable="true" MaxLength="300" Collation="UCA"/>
+                <Property Name="coursecode7" Type="Edm.String" Nullable="true" MaxLength="5" Collation="UCA"/>
+                <Property Name="coursereview7" Type="Edm.String" Nullable="true" MaxLength="300" Collation="UCA"/>
+                <Property Name="coursecode8" Type="Edm.String" Nullable="true" MaxLength="5" Collation="UCA"/>
+                <Property Name="coursereview8" Type="Edm.String" Nullable="true" MaxLength="300" Collation="UCA"/>
+                <Property Name="coursecode9" Type="Edm.String" Nullable="true" MaxLength="5" Collation="UCA"/>
+                <Property Name="coursereview9" Type="Edm.String" Nullable="true" MaxLength="300" Collation="UCA"/>
+                <Property Name="coursecode10" Type="Edm.String" Nullable="true" MaxLength="5" Collation="UCA"/>
+                <Property Name="coursereview10" Type="Edm.String" Nullable="true" MaxLength="300" Collation="UCA"/>
+            </EntityType>
+            <EntityContainer Name="Mat_Container" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="Materials" EntityType="Mat.Materials"/>
+                <EntitySet Name="Positions" EntityType="Mat.Positions"/>
+                <EntitySet Name="OrgUnits" EntityType="Mat.OrgUnits"/>
+                <EntitySet Name="OrgUnit_Position" EntityType="Mat.OrgUnit_Position"/>
+                <EntitySet Name="VoteObjects" EntityType="Mat.VoteObjects"/>
+                <EntitySet Name="VoteItems" EntityType="Mat.VoteItems"/>
+                <EntitySet Name="Student" EntityType="Mat.Student"/>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
