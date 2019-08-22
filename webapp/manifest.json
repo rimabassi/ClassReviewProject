@@ -1,0 +1,146 @@
+{
+	"_version": "1.5.0",
+	"sap.app": {
+		"id": "BUStudentDirectory",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"DBSRV17": {
+				"uri": "/MaterialDB/Mat/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/DBSRV17/metadata.xml",
+					"annotations": [""]
+				}
+			},
+			"": {
+				"uri": "",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": ""
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": ["sap_hcb", "sap_belize", "sap_bluecrystal", "sap_goldreflection"]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "BUStudentDirectory.view.Login",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.62.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.collaboration": {},
+				"sap.ui.comp": {},
+				"sap.uxap": {},
+				"sap.f": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "BUStudentDirectory.i18n.i18n"
+				}
+			},
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Auto",
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "Both"
+				},
+				"dataSource": "DBSRV17",
+				"preload": false
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"viewPath": "BUStudentDirectory.view",
+				"controlId": "LoginID",
+				"viewLevel": 0,
+				"controlAggregation": "pages",
+				"routerClass": "sap.m.routing.Router"
+			},
+			"targets": {
+				"Target_loginview": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "Login"
+				},
+				"Target_newuser": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "NewUser"
+				},
+				"Traget_masterview": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "MasterView"
+				}
+			},
+			"routes": [{
+				"name": "login",
+				"pattern": "",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["Target_loginview"]
+			}, {
+				"name": "newuser",
+				"pattern": "login/newuser",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["Target_newuser"]
+			}, {
+				"name": "masterview",
+				"pattern": "Person{SelectedItem}",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["Traget_masterview"]
+			}]
+		}
+	}
+}
