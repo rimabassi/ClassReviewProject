@@ -1,0 +1,137 @@
+/* Enter your custom styles here */
+.loginForm{
+margin-top: 150px;
+margin-left: 350px ; 
+border-style: solid;
+border-width: 1px;
+border-color: grey;
+border-radius: 5px;
+background-color: #ffffff;
+opacity:0.9;
+}
+
+.loginBtn{
+margin-top: 20px;	
+margin-left: 300px ; 
+margin-bottom: 20px;
+}
+
+.newaccount {
+margin-top: 50px;
+margin-left: 280px ; 
+border-style: solid;
+border-width: 1px;
+border-color: grey;
+border-radius: 5px;
+background-color: #ffffff;
+opacity:0.9;
+}
+
+.CreateBtn {
+margin-top: 40px;	
+margin-left: 350px ; 
+margin-bottom: 20px;	
+}
+
+
+.myTimeErrorValueState input{
+      border-width: 1px;
+      border-style: Solid;
+      border-color: #CC0000;
+      background-color: #FFDDD9;
+}
+.sapMIBar.sapMHeader-CTX{
+background-color : #ee0000;
+
+}
+.sapMIBar-CTX .sapMTitle {
+    color: #f7f7f7;
+ text-shadow: 0 1px rgba(255,255,255,0.5);
+
+}
+.message{
+  background-color: #ee0000;
+  opacity:0.9;	
+}
+
+.sapMLabel {
+	 color: #33333;
+	 font-weight: bold;
+}
+.SubHeaderBar{
+	height: 200px;
+	background-color: #ffffff;
+    opacity:0.9;
+	
+}
+
+.MasterSubHeaderAvatar{
+	margin-left : 100px;
+	margin-top  : 30px;
+	background-color : #ee0000;
+}
+
+.MasterSubHeaderText{
+	color : #6F6F75;
+	font-family: "Times New Roman";
+	 font-size: 15px;
+	
+
+}
+
+.MasterSubHeaderBox{
+	margin-left : 50px;
+	margin-top  : 50px;	
+}
+
+.masterbody{
+	height: 500px;
+	background-color: #ffffff;
+    opacity:0.9;
+	
+}
+.masterButton{
+	margin-left : 600px;
+	margin-top  : 50px;
+}
+.masterOKButton{
+	margin-left : 920px;
+}
+
+.studentlistbox{
+	margin-left : 200px;
+	border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+}
+.buidtext{
+	color : #ee0000;
+	font-family: "Times New Roman";
+	 font-size: 20px;
+	 padding-bottom: 5px;
+	
+}
+.sapMText {
+    color: #030303;
+}
+
+.masterReviewButton{
+	margin-left : 770px;
+	margin-bottom : 10px;
+}
+.reviewlistbox{
+	margin-left : 100px;
+	border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+}
+
+.informationbtn{
+	margin-left : 80px;
+	height : 25px;
+	
+}
+.accountbtn{
+	margin-left : 120px;
+	height : 30px;
+}
